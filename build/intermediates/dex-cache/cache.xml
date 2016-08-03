@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/ice/Desktop/workspace/OptionPlayer/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="9c0c94b69ab730e23b8589a08aa594db55b30285">
+        <dex dex="/home/ice/Desktop/workspace/OptionPlayer/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_ac48ebcb350bca5e340abb849c607e711223de9d/classes.dex" />
+    </item>
+    <item
+        jar="/home/ice/Desktop/workspace/OptionPlayer/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6c42721315173c35059047b6f0afbb76501ca6d5">
+        <dex dex="/home/ice/Desktop/workspace/OptionPlayer/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_9ae7dc5a8dee1ef1290095e59f07121d37c81a63/classes.dex" />
+    </item>
+
+</items>

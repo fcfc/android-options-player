@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <array name="bull">
+    <item>Bull Calendar Spread</item>
+    <item>Bull Call Spread</item>
+    <item>Bull Put Spread</item>
+    <item>Call Backspread</item>
+        <item>Collar Strategy</item>
+        <item>Costless Collar</item>
+        <item>Covered Call OTM</item>
+        <item>Covered Call ITM</item>
+        <item>Covered Straddle</item>
+        <item>Long Call</item>
+        <item>Married Put</item>
+        <item>Protective Put</item>
+  </array>
+  <array name="bear">
+    <item>Bear Call Spread</item>
+    <item>Bear Put Spread</item>
+    <item>Covered Put</item>
+    <item>Diagonal Bear Put Spread</item>
+    <item>Long Put</item>
+    <item>Naked Call ITM</item>
+    <item>Naked Call OTM</item>
+    <item>Put Backspread</item>
+    <item>Protective Call</item>
+    <item>LA 2</item>
+    <item>LA 3</item>
+    <item>LA 4</item>
+    <item>LA 5</item>
+  </array>
+    <array name="neutral">
+        <item>Butterfly Spread</item>
+        <item>Calendar Straddle</item>
+        <item>Condor</item>
+        <item>Iron Butterfly</item>
+        <item>Iron Condor</item>
+        <item>Long Put Butterfly</item>
+        <item>Long Straddle</item>
+        <item>Long Strangle</item>
+        <item>Neutral Calendar Spread</item>
+        <item>Put Ratio Spread</item>
+        
+        <item>Ratio Call Write</item>
+        <item>Ratio Put Write</item>
+        <item>Ratio Spread</item>
+        <item>Short Butterfly</item>
+        <item>Short Put Butterfly</item>
+        <item>Short Straddle</item>
+        <item>Short Strangle</item>
+        <item>Variable Ratio Write</item>
+        <item>Reverse Iron Condor</item>
+        <item>Reverse Iron Butterfly</item>
+        <item>Long Guts</item>
+        <item>Short Guts</item>
+        <item>Long Call Ladder</item>
+        <item>Short Call Ladder</item>
+        <item>Long Put Ladder</item>
+        <item>Short Put Ladder</item>
+        <item>Strip</item>
+        <item>Strap</item>
+  </array>
+  <array name="synthetic">
+    <item>Synthetic Long Put</item>
+        <item>Synthetic Long Stock (Split Strikes)</item>
+        <item>Synthetic Long Stock</item>
+        <item>Synthetic Short Call</item>
+        <item>Synthetic Short Put</item>
+        <item>Synthetic Short Stock (Split Strikes)</item>
+        <item>Synthetic Short Stock</item>
+        <item>Long Call Synthetic Straddle</item>
+        <item>Long Put Synthetic Straddle</item>
+        <item>Short Call Synthetic Straddle</item>
+        <item>Short Put Synthetic Straddle</item>
+  </array>
+</resources>

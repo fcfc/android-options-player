@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main$Generated" generated="true"><source path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res"/><source path="/home/ice/Desktop/workspace/OptionPlayer/app/build/generated/res/rs/debug"/><source path="/home/ice/Desktop/workspace/OptionPlayer/app/build/generated/res/resValues/debug"/></dataSet><dataSet config="debug$Generated" generated="true"><source path="/home/ice/Desktop/workspace/OptionPlayer/app/src/debug/res"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res"><file name="mypreference" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/xml/mypreference.xml" qualifiers="" type="xml"/><file name="icon" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable-ldpi/icon.png" qualifiers="ldpi-v4" type="drawable"/><file name="menu" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/menu/menu.xml" qualifiers="" type="menu"/><file name="optiondata" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/raw/optiondata.txt" qualifiers="" type="raw"/><file name="tubedata" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/raw/tubedata.csv" qualifiers="" type="raw"/><file name="icon" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable-hdpi/icon.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_tab_down" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/ic_tab_down.png" qualifiers="" type="drawable"/><file name="graphpoint" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/graphpoint.png" qualifiers="" type="drawable"/><file name="ic_tab_artists_grey" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/ic_tab_artists_grey.png" qualifiers="" type="drawable"/><file name="ic_menu_mylocation" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/ic_menu_mylocation.png" qualifiers="" type="drawable"/><file name="ic_tab_bear" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/ic_tab_bear.xml" qualifiers="" type="drawable"/><file name="ic_tab_bull_grey" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/ic_tab_bull_grey.png" qualifiers="" type="drawable"/><file name="ic_menu_save" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/ic_menu_save.png" qualifiers="" type="drawable"/><file name="test" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/test.xml" qualifiers="" type="drawable"/><file name="ic_menu_info_details" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/ic_menu_info_details.png" qualifiers="" type="drawable"/><file name="gradient" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/gradient.xml" qualifiers="" type="drawable"/><file name="ic_menu_view" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/ic_menu_view.png" qualifiers="" type="drawable"/><file name="ic_tab_bull" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/ic_tab_bull.xml" qualifiers="" type="drawable"/><file name="ic_tab_albums" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/ic_tab_albums.xml" qualifiers="" type="drawable"/><file name="ic_tab_up" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/ic_tab_up.png" qualifiers="" type="drawable"/><file name="ic_menu_upload" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/ic_menu_upload.png" qualifiers="" type="drawable"/><file name="ic_menu_send" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/ic_menu_send.png" qualifiers="" type="drawable"/><file name="ic_menu_search" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/ic_menu_search.png" qualifiers="" type="drawable"/><file name="ic_tab_artists_white" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/ic_tab_artists_white.png" qualifiers="" type="drawable"/><file name="ic_menu_compass" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable/ic_menu_compass.png" qualifiers="" type="drawable"/><file name="main" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/layout/main.xml" qualifiers="" type="layout"/><file name="tubedata" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/layout/tubedata.xml" qualifiers="" type="layout"/><file name="optioncalc" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/layout/optioncalc.xml" qualifiers="" type="layout"/><file path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/values/arrays.xml" qualifiers=""><array name="bear">
+    <item>Bear Call Spread</item>
+    <item>Bear Put Spread</item>
+    <item>Covered Put</item>
+    <item>Diagonal Bear Put Spread</item>
+    <item>Long Put</item>
+    <item>Naked Call ITM</item>
+    <item>Naked Call OTM</item>
+    <item>Put Backspread</item>
+    <item>Protective Call</item>
+    <item>LA 2</item>
+    <item>LA 3</item>
+    <item>LA 4</item>
+    <item>LA 5</item>
+  </array><array name="bull">
+    <item>Bull Calendar Spread</item>
+    <item>Bull Call Spread</item>
+    <item>Bull Put Spread</item>
+    <item>Call Backspread</item>
+        <item>Collar Strategy</item>
+        <item>Costless Collar</item>
+        <item>Covered Call OTM</item>
+        <item>Covered Call ITM</item>
+        <item>Covered Straddle</item>
+        <item>Long Call</item>
+        <item>Married Put</item>
+        <item>Protective Put</item>
+  </array><array name="synthetic">
+    <item>Synthetic Long Put</item>
+        <item>Synthetic Long Stock (Split Strikes)</item>
+        <item>Synthetic Long Stock</item>
+        <item>Synthetic Short Call</item>
+        <item>Synthetic Short Put</item>
+        <item>Synthetic Short Stock (Split Strikes)</item>
+        <item>Synthetic Short Stock</item>
+        <item>Long Call Synthetic Straddle</item>
+        <item>Long Put Synthetic Straddle</item>
+        <item>Short Call Synthetic Straddle</item>
+        <item>Short Put Synthetic Straddle</item>
+  </array><array name="neutral">
+        <item>Butterfly Spread</item>
+        <item>Calendar Straddle</item>
+        <item>Condor</item>
+        <item>Iron Butterfly</item>
+        <item>Iron Condor</item>
+        <item>Long Put Butterfly</item>
+        <item>Long Straddle</item>
+        <item>Long Strangle</item>
+        <item>Neutral Calendar Spread</item>
+        <item>Put Ratio Spread</item>
+        
+        <item>Ratio Call Write</item>
+        <item>Ratio Put Write</item>
+        <item>Ratio Spread</item>
+        <item>Short Butterfly</item>
+        <item>Short Put Butterfly</item>
+        <item>Short Straddle</item>
+        <item>Short Strangle</item>
+        <item>Variable Ratio Write</item>
+        <item>Reverse Iron Condor</item>
+        <item>Reverse Iron Butterfly</item>
+        <item>Long Guts</item>
+        <item>Short Guts</item>
+        <item>Long Call Ladder</item>
+        <item>Short Call Ladder</item>
+        <item>Long Put Ladder</item>
+        <item>Short Put Ladder</item>
+        <item>Strip</item>
+        <item>Strap</item>
+  </array></file><file path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/values/strings.xml" qualifiers=""><string name="hello">Greetings</string><string name="value2">Buy 1 ATM Put</string><string name="value1">Long 100 Shares</string><string name="title">test</string><string name="seekbar_tracking_on">from</string><string name="app_name">OptionPlayer</string><string name="seekbar_from_touch">from</string><string name="EC">E.C.</string><string name="main_no_items">No orders to display</string><string name="xaxis">Stock Price at Expiration</string><string name="slider1">Strike Price</string><string name="Mix">Mix</string><string name="slider2">Risk</string><string name="label">label</string><string name="value4"/><string name="value3"/><string name="yaxis">Profit or</string></file><file path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/values/attrs.xml" qualifiers=""><declare-styleable name="Graph">
+        <attr format="integer" name="d1"/>
+        <attr format="integer" name="d2"/>
+        <attr format="integer" name="d3"/>
+        <attr format="integer" name="d4"/>
+        <attr format="integer" name="d5"/>
+        <attr format="integer" name="d6"/>
+        <attr format="integer" name="d7"/>
+        <attr format="integer" name="d8"/>
+        <attr format="integer" name="d9"/>
+    </declare-styleable></file><file name="icon" path="/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/drawable-mdpi/icon.png" qualifiers="mdpi-v4" type="drawable"/></source><source path="/home/ice/Desktop/workspace/OptionPlayer/app/build/generated/res/rs/debug"/><source path="/home/ice/Desktop/workspace/OptionPlayer/app/build/generated/res/resValues/debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="/home/ice/Desktop/workspace/OptionPlayer/app/src/debug/res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="Graph"><attr format="integer" name="d1"/><attr format="integer" name="d2"/><attr format="integer" name="d3"/><attr format="integer" name="d4"/><attr format="integer" name="d5"/><attr format="integer" name="d6"/><attr format="integer" name="d7"/><attr format="integer" name="d8"/><attr format="integer" name="d9"/></declare-styleable></configuration></mergedItems></merger>
