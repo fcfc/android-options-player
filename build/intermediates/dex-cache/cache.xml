@@ -2,18 +2,22 @@
 <items version="2" >
 
     <item
-        jar="/home/ice/Desktop/workspace/OptionPlayer/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        is-multidex="false"
+        jar="/home/ice/Desktop/workspace/android-options-player/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.2"
-        sha1="9c0c94b69ab730e23b8589a08aa594db55b30285">
-        <dex dex="/home/ice/Desktop/workspace/OptionPlayer/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_ac48ebcb350bca5e340abb849c607e711223de9d/classes.dex" />
+        sha1="8b13940d6f2e994c90c760da8b396278fa7006fa">
+        <dex dex="/home/ice/Desktop/workspace/android-options-player/app/build/intermediates/pre-dexed/debug/instant-run_5bd4fa920f394bb8cb3b5a1f3d45930998676f45.jar" />
     </item>
     <item
-        jar="/home/ice/Desktop/workspace/OptionPlayer/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        is-multidex="false"
+        jar="/home/ice/Desktop/workspace/android-options-player/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.2"
-        sha1="6c42721315173c35059047b6f0afbb76501ca6d5">
-        <dex dex="/home/ice/Desktop/workspace/OptionPlayer/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_9ae7dc5a8dee1ef1290095e59f07121d37c81a63/classes.dex" />
+        sha1="427e5a38e3fd261cdd25494a24012f5c01b38274">
+        <dex dex="/home/ice/Desktop/workspace/android-options-player/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_48fa82aa6fededa5d491e4e5feb660d2a828f578.jar" />
     </item>
 
 </items>

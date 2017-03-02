@@ -12,17 +12,19 @@ import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.graphics.Path;
 import android.util.AttributeSet;
-import android.view.Display;
 import android.view.View;
-import android.view.WindowManager;
+
+import java.util.ArrayList;
+import java.util.List;
+
 ;
 
 public class OptionGraph extends View implements Graph {
     public static final String PREFS_NAME = "MyPrefsFile";
 
-	public int[] dataPoints = {180, 170, 160, 150, 140, 130, 120, 110, 100, 90, 80, 70};
-	public String xLabels[] = {"10", "20", "30", "40", "50", "60", "70", "80"};
-	public String yLabels[] = {"10", "20", "30", "40", "50"};
+    List<Integer> dataPoints = new ArrayList();// graph drawing constants
+    List<String> xLabels = new ArrayList<String>();
+    List<String> yLabels = new ArrayList<String>();
 
 	private int strikePrice;
 	private int xorigin = 150;
@@ -35,7 +37,7 @@ public class OptionGraph extends View implements Graph {
         super(context, attrs);
         Bitmap _scratch = BitmapFactory.decodeResource(getResources(), R.drawable.icon);
 //      canvas.drawColor(Color.BLACK);
-        TypedArray a=getContext().obtainStyledAttributes(attrs,R.styleable.Graph);
+        TypedArray a=getContext().obtainStyledAttributes(attrs, R.styleable.Graph);
  
         }
  
@@ -58,14 +60,12 @@ public class OptionGraph extends View implements Graph {
         mTextPaint.setTextSize(40);
         
         setXLabels(canvas, mTextPaint);
-                                
+        setYLabels(canvas, mTextPaint);
+
         // draw horizontal lines
         
         
-        canvas.drawText("P/L", 20, 60, mTextPaint);
-        canvas.drawText("0", 20, yorigin/2, mTextPaint);
-        canvas.drawText("-$200", 20, yorigin,  mTextPaint);
-        canvas.drawText("$300", 20, yorigin/4, mTextPaint);
+        canvas.drawText("P/L", 20, 00, mTextPaint);
         mLinePaint.setColor(0x66005500);
 
         mLinePaint.setColor(0xFF0000FF);
@@ -121,24 +121,48 @@ public class OptionGraph extends View implements Graph {
         invalidate();
     }
     
-    public void setXLabels(Canvas c, Paint paint)  {
+    public void setXLabels(Canvas c, Paint paint) {
         paint.setColor(0xEEEEEEEE);
         int xoffset = 115;
-        int yoffset = yorigin+50;
-        c.drawText(xLabels[0], xoffset+100, yoffset, paint);
-        c.drawText(xLabels[1], xoffset+200, yoffset, paint);
-        c.drawText(xLabels[2], xoffset+300, yoffset, paint);
-        c.drawText(xLabels[3], xoffset+400, yoffset, paint);
-        c.drawText(xLabels[4], xoffset+500, yoffset, paint);
-        c.drawText(xLabels[5], xoffset+600, yoffset, paint);
-        c.drawText(xLabels[6], xoffset+700, yoffset, paint);
-        c.drawText(xLabels[7], xoffset+800, yoffset, paint);
+        int yoffset = yorigin + 50;
+        xLabels.add("");
+        xLabels.add("A");
+        xLabels.add("B");
+        xLabels.add("C");
+        xLabels.add("D");
+        xLabels.add("E");
+        xLabels.add("F");
+        xLabels.add("G");
+        xLabels.add("H");
+        xLabels.add("I");
+
+        for (int i = 0; i < xLabels.size(); i++)   {
+            c.drawText(xLabels.get(i), xoffset, yoffset, paint);
+        xoffset += 100;
+        }
 
     }
-	@Override
-    public void setYLabels()  {
+
+    public void setYLabels(Canvas c, Paint paint)  {
+        paint.setColor(0xEEEEEEEE);
+        int xoffset = 20;
+        int yoffset = yorigin + 50;
+        yLabels.add("");
+        yLabels.add("-$200");
+        yLabels.add("C");
+        yLabels.add("$0");
+        yLabels.add("E");
+        yLabels.add("$300");
+        yLabels.add("G");
+        yLabels.add("H");
+
+        for (int i = 0; i < yLabels.size(); i++)   {
+            c.drawText(yLabels.get(i), xoffset, yoffset, paint);
+            yoffset -= 100;
+        }
 
     }
+
     
 
 	public void setWidth() {
@@ -161,6 +185,11 @@ public class OptionGraph extends View implements Graph {
 		
 	}
 
+    @Override
+    public void setYLabels() {
+        // TODO Auto-generated method stub
+
+    }
 
 	}
 

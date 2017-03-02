@@ -1,9 +1,5 @@
 package com.ice.optionplayer;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Path;
@@ -13,10 +9,110 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.SeekBar;
-import android.widget.TextView;
 import android.widget.SeekBar.OnSeekBarChangeListener;
+import android.widget.TextView;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlPullParserFactory;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class OptionCalc extends Activity {
+	public List<Strategy> brandList = new ArrayList<Strategy>();
+
+	private XmlPullParser grabXML(String theFile)
+	{
+		// OPEN XML FILE
+		InputStream istr = null;
+		XmlPullParserFactory factory = null;
+		XmlPullParser xrp = null;
+
+		try {
+			istr = this.getAssets().open(theFile);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		try {
+			factory = XmlPullParserFactory.newInstance();
+		} catch (XmlPullParserException e) {
+			e.printStackTrace();
+		}
+
+		factory.setNamespaceAware(true);
+
+		try {
+			xrp = factory.newPullParser();
+		} catch (XmlPullParserException e) {
+			e.printStackTrace();
+		}
+		try {
+			xrp.setInput(istr, "UTF-8");
+		} catch (XmlPullParserException e) {
+			e.printStackTrace();
+		}
+
+		return xrp;
+	}
+
+	public void  getAnswerFromXML(XmlPullParser xrp)
+	{
+		int i = 0;
+		int eventType = 0;
+
+		try {
+			eventType = xrp.getEventType();
+		} catch (XmlPullParserException e) {
+			e.printStackTrace();
+		}
+
+		String tagtext = "";
+		String a = "";
+		String b = "";
+		String c = "";
+		String d = "";
+
+		while (eventType != XmlPullParser.END_DOCUMENT) {
+
+			if(eventType == XmlPullParser.START_DOCUMENT) {
+			}
+			else if(eventType == XmlPullParser.START_TAG) {
+			}
+			else if(eventType == XmlPullParser.END_TAG) {
+				String endtag = xrp.getName();
+				if (endtag.equals("name"))
+					a = tagtext;
+				if (endtag.equals("play1"))
+					b = tagtext;
+				if (endtag.equals("play2"))
+					c = tagtext;
+				if (endtag.equals("play3"))
+					d = tagtext;
+
+				if (endtag.equals("option"))  {
+					brandList.add(new Strategy(a, b, c, d, new Path(), new Path()));
+				}
+			}
+			else if(eventType == XmlPullParser.TEXT) {
+				tagtext = xrp.getText();
+
+			}
+
+			try {
+				eventType = xrp.next();
+			} catch (XmlPullParserException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 
 	final Map<String , Path> paths = new HashMap<String, Path>() {{
 		put("Bull Calendar Spread", new Path());
@@ -28,7 +124,18 @@ public class OptionCalc extends Activity {
 
 	final Map<String , Strategy> strategies = new HashMap<String , Strategy>() {{
 		// Bullish strategies
+/*
+		XmlPullParser xrp = grabXML("xml/optioninfo");
+		getAnswerFromXML(xrp);
 
+		List<String> pointsList = new ArrayList<String>();
+
+		Iterator<Strategy> iterator = brandList.iterator();
+
+		while (iterator.hasNext()) {
+			Strategy test = iterator.next();
+			put(test.name, new Strategy(test.play1, test.play2, test.play3, test.play4, new Path(), new Path()));
+		} */
 		put("Bull Calendar Spread", new Strategy("Sell 1 Near-Term OTM Call", "Buy 1 Long-Term OTM Call", "", "", new Path(), new Path()));
 		put("Bull Call Spread", new Strategy("Buy 1 ITM Call", "Sell 1 OTM Call", "", "", new Path(), new Path()));
 		put("Bull Put Spread", new Strategy("Buy 1 OTM Put", "Sell 1 ITM Put", "", "", new Path(), new Path()));
@@ -59,27 +166,27 @@ public class OptionCalc extends Activity {
 		// Neutral strategies
 		put("Butterfly Spread", new Strategy("Sell 1 ITM Call", "Buy 1 ITM Call(Lower Strike)", "Sell 1 OTM Call", "Buy 1 OTM Call (Higher Strike)", new Path(), new Path()));;
 	//	put("Calendar Spread", new Strategy("Sell 1 ITM Call", "Buy 1 ITM Call(Lower Strike)", "Sell 1 OTM Call", "Buy 1 OTM Call (Higher Strike)", new Path(), new Path()));;
-		put("Condor", new Strategy("Sell 1 ITM Call", "Buy 1 ITM Call(Lower Strike)", "Sell 1 OTM Call", "Buy 1 OTM Call (Higher Strike)", new Path(), new Path())); 
+		put("Condor", new Strategy("Sell 1 ITM Call", "Buy 1 ITM Call(Lower Strike)", "Sell 1 OTM Call", "Buy 1 OTM Call (Higher Strike)", new Path(), new Path()));
 		put("Iron Butterfly", new Strategy("Buy 1 OTM Put", "Sell 1 ATM Put", "Sell 1 ATM Call", "Buy 1 OTM Call", new Path(), new Path()));
 		put("Iron Condor", new Strategy("Sell 1 OTM Put", "Buy 1 OTM Put(Lower Strike)", "Sell 1 OTM Call", "Buy 1 OTM Call(Higher Strike)", new Path(), new Path()));
-		put("Long Put Butterfly", new Strategy("Buy 1 OTM Put", "Sell 2 ATM Puts", "Buy 1 ITM Put", "", new Path(), new Path())); 
-		put("Long Straddle", new Strategy("Buy 1 ATM Call", "Buy 1 ATM Put", "", "", new Path(), new Path())); 
-		put("Long Strangle", new Strategy("Buy 1 OTM Call", "Buy 1 OTM Put", "", "", new Path(), new Path())); 
+		put("Long Put Butterfly", new Strategy("Buy 1 OTM Put", "Sell 2 ATM Puts", "Buy 1 ITM Put", "", new Path(), new Path()));
+		put("Long Straddle", new Strategy("Buy 1 ATM Call", "Buy 1 ATM Put", "", "", new Path(), new Path()));
+		put("Long Strangle", new Strategy("Buy 1 OTM Call", "Buy 1 OTM Put", "", "", new Path(), new Path()));
 		put("Neutral Calendar Spread", new Strategy("Sell 1 Near-Term ATM Call", "Buy 1 Long-Term ATM Call", "", "", new Path(), new Path()));
 		put("Put Ratio Spread", new Strategy("Buy 1 ITM Put",  "Sell 2 OTM Puts", "", "", new Path(), new Path()));
 		put("Ratio Call Write", new Strategy("Long 100 Shares", "Sell 2 ATM Calls", "", "", new Path(), new Path()));
 		put("Ratio Put Write", new Strategy("Short 100 Shares", "Sell 2 ATM Puts", "", "", new Path(), new Path()));
-		put("Ratio Spread", new Strategy("Buy 1 ITM Call", "Sell 2 OTM Calls", "", "", new Path(), new Path())); 
-		put("Short Butterfly", new Strategy("Sell 1 ITM Call", "Buy 2 ATM Calls", "Sell 1 OTM Call", "", new Path(), new Path())); 
-		put("Short Condor", new Strategy("Buy 1 ITM Call", "Sell 1 ITM Call(Lower Strike)", "Buy 1 OTM Call", "Sell 1 OTM Call (Higher Strike)", new Path(), new Path())); 
+		put("Ratio Spread", new Strategy("Buy 1 ITM Call", "Sell 2 OTM Calls", "", "", new Path(), new Path()));
+		put("Short Butterfly", new Strategy("Sell 1 ITM Call", "Buy 2 ATM Calls", "Sell 1 OTM Call", "", new Path(), new Path()));
+		put("Short Condor", new Strategy("Buy 1 ITM Call", "Sell 1 ITM Call(Lower Strike)", "Buy 1 OTM Call", "Sell 1 OTM Call (Higher Strike)", new Path(), new Path()));
 		put("Short Put Butterfly", new Strategy("Sell 1 ITM Put", "Buy 2 ATM Puts", "Sell 1 OTM Put", "", new Path(), new Path()));
-		put("Short Straddle", new Strategy("Sell 1 ATM Call", "Sell 1 ATM Put", "", "", new Path(), new Path())); 
-		put("Short Strangle", new Strategy("Sell 1 OTM Call",  "Sell 1 OTM Put", "", "", new Path(), new Path())); 
+		put("Short Straddle", new Strategy("Sell 1 ATM Call", "Sell 1 ATM Put", "", "", new Path(), new Path()));
+		put("Short Strangle", new Strategy("Sell 1 OTM Call",  "Sell 1 OTM Put", "", "", new Path(), new Path()));
 		put("Variable Ratio Write", new Strategy("Long 100 Shares", "Sell 1 ITM Call", "Sell 1 OTM Call", "", new Path(), new Path()));
 		put("Reverse Iron Condor", new Strategy("Buy 1 OTM Put", "Sell 1 OTM Put(Lower Strike)", "Buy 1 OTM Call", "Sell 1 OTM Call(Higher Strike)", new Path(), new Path()));
 		put("Reverse Iron Butterfly", new Strategy("Sell 1 OTM Put", "Buy 1 ATM Put", "Buy 1 ATM Call", "Sell 1 OTM Call", new Path(), new Path()));
 		put("Long Guts", new Strategy("Buy 1 ITM Call", "Buy 1 ITM Put", "", "", new Path(), new Path()));
-		put("Short Guts", new Strategy("Sell 1 ITM Call", "Sell 1 ITM Put", "", "", new Path(), new Path())); 
+		put("Short Guts", new Strategy("Sell 1 ITM Call", "Sell 1 ITM Put", "", "", new Path(), new Path()));
 		put("Long Call Ladder", new Strategy("Buy 1 ITM Call", "Sell 1 ATM Call", "Sell 1 OTM Call", "", new Path(), new Path()));
 		put("Short Call Ladder", new Strategy("Sell 1 ITM Call", "Buy 1 ATM Call", "Buy 1 OTM Call", "", new Path(), new Path()));
 		put("Long Put Ladder", new Strategy("Buy 1 ITM Put", "Sell 1 ATM Put", "Sell 1 OTM Put", "", new Path(), new Path()));
@@ -114,7 +221,9 @@ public class OptionCalc extends Activity {
 
         /* path points */
     	public Point cp = new Point (300, 250);
-    	public int rtx = 350;
+		public Point cp2 = new Point(250, 200);
+
+		public int rtx = 350;
     	public int ltx = 250;
     	public int endx = 440;
     	public int neg1y = 175;
@@ -257,7 +366,8 @@ public class OptionCalc extends Activity {
       		testPath.moveTo(start.x, start.y);
     		testPath.lineTo(250, 150);
     		testPath.lineTo(350, 250);
-    		testPath.lineTo(480, 100);
+    		testPath.lineTo(480, 50);
+			testPath.lineTo(1000, 50);
 
     		testPath  = strategies.get("Bull Put Spread").graphPath;
         	testPath.moveTo(x1, neg3y);
@@ -586,78 +696,31 @@ public class OptionCalc extends Activity {
          	oPath.lineTo(cp.x, y3);
          	oPath.lineTo(rtx, neg2y);
          	oPath.lineTo(endx, neg2y);
-    		oPath = strategies.get("Long Put Butterfly").optionPath; 
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Long Straddle").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Long Strangle").optionPath; 
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Neutral Calendar Spread").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Put Ratio Spread").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Ratio Call Write").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Ratio Put Write").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Ratio Spread").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Short Butterfly").optionPath; 
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Short Condor").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Short Put Butterfly").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Short Straddle").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Short Strangle").optionPath; 
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Variable Ratio Write").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Reverse Iron Condor").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Reverse Iron Butterfly").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Long Guts").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Short Guts").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Long Call Ladder").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Short Call Ladder").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Long Put Ladder").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Short Put Ladder").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
-   		    oPath = strategies.get("Strip").optionPath;
-      		oPath.moveTo(x1, cp.y);
-        	oPath.lineTo(ltx, neg2y);
-    		oPath = strategies.get("Strap").optionPath;
-      		oPath.moveTo(x1, cp.y);
-         	oPath.lineTo(ltx, neg2y);
+
+			makePosition(strategies.get("Long Put Butterfly").optionPath, cp, cp2);
+			makePosition(strategies.get("Long Straddle").optionPath, cp, cp2);
+			makePosition(strategies.get("Long Strangle").optionPath, cp, cp2);
+			makePosition(strategies.get("Neutral Calendar Spread").optionPath, cp, cp2);
+			makePosition(strategies.get("Put Ratio Spread").optionPath, cp, cp2);
+			makePosition(strategies.get("Ratio Call Write").optionPath, cp, cp2);
+			makePosition(strategies.get("Ratio Put Write").optionPath, cp, cp2);
+			makePosition(strategies.get("Ratio Spread").optionPath, cp, cp2);
+			makePosition(strategies.get("Short Butterfly").optionPath, cp, cp2);
+			makePosition(strategies.get("Short Condor").optionPath, cp, cp2);
+			makePosition(strategies.get("Short Put Butterfly").optionPath, cp, cp2);
+			makePosition(strategies.get("Short Straddle").optionPath, cp, cp2);
+			makePosition(strategies.get("Short Strangle").optionPath, cp, cp2);
+			makePosition(strategies.get("Variable Ratio Write").optionPath, cp, cp2);
+			makePosition(strategies.get("Reverse Iron Condor").optionPath, cp, cp2);
+			makePosition(strategies.get("Reverse Iron Butterfly").optionPath, cp, cp2);
+			makePosition(strategies.get("Long Guts").optionPath, cp, cp2);
+			makePosition(strategies.get("Short Guts").optionPath, cp, cp2);
+			makePosition(strategies.get("Long Call Ladder").optionPath, cp, cp2);
+			makePosition(strategies.get("Short Call Ladder").optionPath, cp, cp2);
+			makePosition(strategies.get("Long Put Ladder").optionPath, cp, cp2);
+			makePosition(strategies.get("Short Put Ladder").optionPath, cp, cp2);
+			makePosition(strategies.get("Strip").optionPath, cp, cp2);
+			makePosition(strategies.get("Strap").optionPath, cp, cp2);
 /*    		
     		// Synthetic strategies
     		oPath = strategies.get("Synthetic Long Call").optionPath;
@@ -698,7 +761,11 @@ public class OptionCalc extends Activity {
          	oPath.lineTo(ltx, neg2y);
          	*/
         }
-        
+
+	private void makePosition(Path oPath, Point start, Point finish) {
+		oPath.moveTo(start.x, start.y);
+		oPath.lineTo(finish.x, finish.y);
+	}
         /**
          * Simple class containing two integer values and a comparison function.
          * There's probably something I should use instead, but this was quick and
@@ -726,5 +793,7 @@ public class OptionCalc extends Activity {
                 return "Coordinate: [" + x + "," + y + "]";
             }
         }
+
+
 }
        

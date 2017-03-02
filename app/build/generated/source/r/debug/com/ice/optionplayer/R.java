@@ -111,49 +111,51 @@ containing a value of this type.
         public static final int test=0x7f020013;
     }
     public static final class id {
-        public static final int MENU_INFO=0x7f09001e;
-        public static final int MENU_MY_LOCATION=0x7f09001d;
-        public static final int MENU_SEARCH=0x7f09001c;
-        public static final int MENU_SEND=0x7f09001b;
-        public static final int MENU_UPLOAD=0x7f09001a;
-        public static final int MENU_VIEW=0x7f090019;
-        public static final int duoTable1=0x7f09000a;
-        public static final int duoTable3=0x7f09000c;
-        public static final int duoTable4=0x7f09000d;
-        public static final int duoTube=0x7f090007;
-        public static final int empty=0x7f090005;
-        public static final int graphduo=0x7f090008;
-        public static final int leg1=0x7f09000e;
-        public static final int leg1val=0x7f09000f;
-        public static final int leg2=0x7f090010;
-        public static final int leg2val=0x7f090011;
-        public static final int leg3=0x7f090012;
-        public static final int leg3val=0x7f090013;
-        public static final int leg4=0x7f090014;
-        public static final int leg4val=0x7f090015;
-        public static final int linearLayout1=0x7f090017;
-        public static final int list=0x7f090001;
-        public static final int list2=0x7f090002;
-        public static final int list3=0x7f090003;
-        public static final int list4=0x7f090004;
-        public static final int main=0x7f090000;
-        public static final int mainlayout=0x7f090006;
-        public static final int plateVoltage=0x7f090016;
-        public static final int screenVoltage=0x7f090018;
-        public static final int tableLayout1=0x7f090009;
-        public static final int tableLayout2=0x7f09000b;
+        public static final int MENU_INFO=0x7f090020;
+        public static final int MENU_MY_LOCATION=0x7f09001f;
+        public static final int MENU_SEARCH=0x7f09001e;
+        public static final int MENU_SEND=0x7f09001d;
+        public static final int MENU_UPLOAD=0x7f09001c;
+        public static final int MENU_VIEW=0x7f09001b;
+        public static final int bodytext=0x7f090001;
+        public static final int duoTable1=0x7f09000c;
+        public static final int duoTable3=0x7f09000e;
+        public static final int duoTable4=0x7f09000f;
+        public static final int duoTube=0x7f090009;
+        public static final int empty=0x7f090007;
+        public static final int graphduo=0x7f09000a;
+        public static final int leg1=0x7f090010;
+        public static final int leg1val=0x7f090011;
+        public static final int leg2=0x7f090012;
+        public static final int leg2val=0x7f090013;
+        public static final int leg3=0x7f090014;
+        public static final int leg3val=0x7f090015;
+        public static final int leg4=0x7f090016;
+        public static final int leg4val=0x7f090017;
+        public static final int linearLayout1=0x7f090019;
+        public static final int list=0x7f090003;
+        public static final int list2=0x7f090004;
+        public static final int list3=0x7f090005;
+        public static final int list4=0x7f090006;
+        public static final int main=0x7f090002;
+        public static final int mainlayout=0x7f090008;
+        public static final int plateVoltage=0x7f090018;
+        public static final int screenVoltage=0x7f09001a;
+        public static final int tableLayout1=0x7f09000b;
+        public static final int tableLayout2=0x7f09000d;
+        public static final int textView1=0x7f090000;
     }
     public static final class layout {
-        public static final int main=0x7f030000;
-        public static final int optioncalc=0x7f030001;
-        public static final int tubedata=0x7f030002;
+        public static final int list_item=0x7f030000;
+        public static final int main=0x7f030001;
+        public static final int optioncalc=0x7f030002;
+        public static final int tubedata=0x7f030003;
     }
     public static final class menu {
         public static final int menu=0x7f080000;
     }
     public static final class raw {
         public static final int optiondata=0x7f050000;
-        public static final int tubedata=0x7f050001;
     }
     public static final class string {
         public static final int EC=0x7f070000;

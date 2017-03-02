@@ -1,14 +1,18 @@
 [
     {
-        "merged": "/home/ice/Desktop/workspace/OptionPlayer/app/build/intermediates/res/merged/debug/layout/main.xml",
-        "source": "/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/layout/main.xml"
+        "merged": "/home/ice/Desktop/workspace/android-options-player/app/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/home/ice/Desktop/workspace/android-options-player/app/src/main/res/layout/main.xml"
     },
     {
-        "merged": "/home/ice/Desktop/workspace/OptionPlayer/app/build/intermediates/res/merged/debug/layout/optioncalc.xml",
-        "source": "/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/layout/optioncalc.xml"
+        "merged": "/home/ice/Desktop/workspace/android-options-player/app/build/intermediates/res/merged/debug/layout/list_item.xml",
+        "source": "/home/ice/Desktop/workspace/android-options-player/app/src/main/res/layout/list_item.xml"
     },
     {
-        "merged": "/home/ice/Desktop/workspace/OptionPlayer/app/build/intermediates/res/merged/debug/layout/tubedata.xml",
-        "source": "/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/layout/tubedata.xml"
+        "merged": "/home/ice/Desktop/workspace/android-options-player/app/build/intermediates/res/merged/debug/layout/optioncalc.xml",
+        "source": "/home/ice/Desktop/workspace/android-options-player/app/src/main/res/layout/optioncalc.xml"
+    },
+    {
+        "merged": "/home/ice/Desktop/workspace/android-options-player/app/build/intermediates/res/merged/debug/layout/tubedata.xml",
+        "source": "/home/ice/Desktop/workspace/android-options-player/app/src/main/res/layout/tubedata.xml"
     }
 ]

@@ -1,7 +1,7 @@
 package com.ice.optionplayer;
 
 
-public class OptionData  {
+public class OptionData {
     public String name = "";
     public int xmin= 0;
     public int xcenter = 0;

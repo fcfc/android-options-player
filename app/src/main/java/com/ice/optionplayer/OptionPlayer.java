@@ -1,9 +1,6 @@
 package com.ice.optionplayer;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -14,22 +11,25 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TabHost;
-import android.widget.TextView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TabHost.TabContentFactory;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class OptionPlayer extends Activity {
 
-	   private static final String LIST_TAB_TAG = "List";
-	   private static final String MAP_TAB_TAG = "Map";
-	   private static final String MAP_NEU_TAG = "Neutral";
-	   private static final String MAP_SYN_TAG = "Synthetic";
+	private static final String LIST_TAB_TAG = "List";
+	private static final String MAP_TAB_TAG = "Map";
+	private static final String MAP_NEU_TAG = "Neutral";
+	private static final String MAP_SYN_TAG = "Synthetic";
 
-	   TabHost tabHost;
+	TabHost tabHost;
 	private ListView listView;	
 	private ListView listView2;
 	private ListView listView3;
@@ -48,21 +48,17 @@ public class OptionPlayer extends Activity {
 	    listView = (ListView) findViewById(R.id.list);
 	    listView.setEmptyView((TextView) findViewById(R.id.empty));
 	    
-        List<String> pointsList = new ArrayList<String>();
+        List<MyListItem> pointsList = new ArrayList<MyListItem>();
         TypedArray bull = res.obtainTypedArray(R.array.bull);
 
-        // populate list
+        for (int i=0; i<bull.length(); i++)    {
+            pointsList.add(new MyListItem(R.drawable.ic_menu_compass, bull.getString(i), null, null, null, null));
+		}
 
-        for (int i=0; i<8; i++)    {
-            pointsList.add(new String(bull.getString(i)));
-
-	   }
-
-        listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, pointsList));
+        listView.setAdapter(new CustomAdapter(this, pointsList));
         listView.setOnItemClickListener(new OnItemClickListener() {
     
            public void onItemClick(AdapterView parent, View view, int position, long id) {
-                	// programmatically switch tabs to the map view
                 CharSequence testString = ((TextView) view).getText();
                 Intent i = new Intent(OptionPlayer.this, OptionCalc.class);
                 i.putExtra("type", testString);
@@ -78,7 +74,7 @@ public class OptionPlayer extends Activity {
 
         // populate list
 
-        for (int i=0; i<8; i++)    {
+        for (int i=0; i<bear.length(); i++)    {
             point2List.add(new String(bear.getString(i)));
 
 	   }
@@ -104,7 +100,7 @@ public class OptionPlayer extends Activity {
 
         // populate list
 
-        for (int i=0; i<8; i++)    {
+        for (int i=0; i<neutral.length(); i++)    {
             point3List.add(new String(neutral.getString(i)));
 
 	   }
@@ -132,7 +128,7 @@ public class OptionPlayer extends Activity {
         List<String> point4List = new ArrayList<String>();
         TypedArray synthetic = res.obtainTypedArray(R.array.synthetic);
 
-        for (int i=0; i<8; i++)    {
+        for (int i=0; i<synthetic.length(); i++)    {
             point4List.add(new String(synthetic.getString(i)));
 
 	   }

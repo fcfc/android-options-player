@@ -1,10 +1,6 @@
 [
     {
-        "merged": "/home/ice/Desktop/workspace/OptionPlayer/app/build/intermediates/res/merged/debug/raw/tubedata.csv",
-        "source": "/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/raw/tubedata.csv"
-    },
-    {
-        "merged": "/home/ice/Desktop/workspace/OptionPlayer/app/build/intermediates/res/merged/debug/raw/optiondata.txt",
-        "source": "/home/ice/Desktop/workspace/OptionPlayer/app/src/main/res/raw/optiondata.txt"
+        "merged": "/home/ice/Desktop/workspace/android-options-player/app/build/intermediates/res/merged/debug/raw/optiondata.txt",
+        "source": "/home/ice/Desktop/workspace/android-options-player/app/src/main/res/raw/optiondata.txt"
     }
 ]

@@ -3,358 +3,374 @@
 <options>
   <option>
       <name>Bull Calendar Spread</name>
-      <leg1>Sell 1 Near-Term OTM Call</leg1>
-      <leg2>Buy 1 Long-Term OTM Call</leg2>
+      <play1>Sell 1 Near-Term OTM Call</play1>
+      <play2>Buy 1 Long-Term OTM Call</play2>
+      <leg1>
+	<x>150</x>
+	<y>200</y>
+      </leg1>
+      <leg2>
+	<x>250</x>
+	<y>200</y>
+      </leg2>
+      <leg3>
+	<x>350</x>
+	<y>75</y>
+      </leg3>
+      <leg4>
+	<x>440</x>
+	<y>75</y>
+      </leg4>
    </option>
    <option>
       <name>Bull Call Spread</name>
-      <leg1>Buy 1 ITM Call</leg1>
-      <leg2>Sell 1 OTM Call</leg2>
+      <play1>Buy 1 ITM Call</play1>
+      <play2>Sell 1 OTM Call</play2>
    </option>
    <option>
       <name>Bull Put Spread</name>
-      <leg1>Buy 1 OTM Put</leg1>
-      <leg2>Sell 1 ITM Put</leg2>
+      <play1>Buy 1 OTM Put</play1>
+      <play2>Sell 1 ITM Put</play2>
    </option>
    <option>
       <name>Call Backspread</name>
-      <leg1>Sell 1 ITM Call</leg1>
-      <leg2>Buy 2 OTM Calls</leg2>
+      <play1>Sell 1 ITM Call</play1>
+      <play2>Buy 2 OTM Calls</play2>
    </option>   
    <option>
       <name>Collar Strategy</name>
-      <leg1>Long 100 Shares</leg1>
-      <leg2>Sell 1 OTM Call</leg2>
-      <leg3>Buy 1 OTM Put</leg3>
+      <play1>Long 100 Shares</play1>
+      <play2>Sell 1 OTM Call</play2>
+      <play3>Buy 1 OTM Put</play3>
    </option>  
    <option>
       <name>Costless Collar</name>
-      <leg1>Long 100 Shares</leg1>
-      <leg2>Sell 1 OTM LEAPS Call</leg2>
+      <play1>Long 100 Shares</play1>
+      <play2>Sell 1 OTM LEAPS Call</play2>
       <leg3>Buy 1 ATM LEAPS Put</leg3>
    </option>
    <option>
       <name>Covered Call OTM</name>
-      <leg1>Long 100 Shares</leg1>
-      <leg2>Sell 1 Call</leg2>
+      <play1>Long 100 Shares</play1>
+      <play2>Sell 1 Call</play2>
    </option>
    <option>
       <name>Covered Call ITM</name>
-      <leg1>Long 100 Shares</leg1>
-      <leg2>Sell 1 ITM Call</leg2>
+      <play1>Long 100 Shares</play1>
+      <play2>Sell 1 ITM Call</play2>
    </option>
    <option>
      <name>Covered Straddle</name>
-     <leg1>Long 100 Shares</leg1>
-     <leg2>Sell 1 ATM Call</leg2>
+     <play1>Long 100 Shares</play1>
+     <play2>Sell 1 ATM Call</play2>
      <leg3>Sell 1 ATM Put</leg3>
    </option>
    <option>
      <name>Diagonal Bull Call Spread</name>
-     <leg1>Buy 1 Long-Term ITM Call</leg1>
-     <leg2>Sell 1 Near-Term OTM Call</leg2>
+     <play1>Buy 1 Long-Term ITM Call</play1>
+     <play2>Sell 1 Near-Term OTM Call</play2>
    </option>  
    <option>
      <name>Long Call</name>
-     <leg1>Buy 1 ATM Call</leg1>
-     <leg2></leg2>
+     <play1>Buy 1 ATM Call</play1>
+     <play2></play2>
      </option>
    <option>
      <name>Married Put</name>
-     <leg1>Long 100 Shares</leg1>
-     <leg2>Buy 1 ATM Put</leg2>
+     <play1>Long 100 Shares</play1>
+     <play2>Buy 1 ATM Put</play2>
    </option>
    <option>
      <name>Protective Put</name>
-     <leg1></leg1>
-     <leg2></leg2>
+     <play1></play1>
+     <play2></play2>
    </option>
    <option>
      <name>Uncovered Put Write</name>
-     <leg1>Sell 1 ATM Put</leg1>
-     <leg2></leg2>
+     <play1>Sell 1 ATM Put</play1>
+     <play2></play2>
    </option>
    <option>
      <name>Covered Put Combination</name>
-     <leg1>Long 100 Shares</leg1>
-     <leg2>Sell 1 OTM Call</leg2>
+     <play1>Long 100 Shares</play1>
+     <play2>Sell 1 OTM Call</play2>
      <leg3>Sell 1 OTM Put</leg3>
    </option>
 
 
    <option>
      <name>Bear Call Spread</name>
-     <leg1>Buy 1 OTM Call</leg1>
-     <leg2>Sell 1 ITM Call</leg2>
+     <play1>Buy 1 OTM Call</play1>
+     <play2>Sell 1 ITM Call</play2>
    </option>
    <option>
      <name>Bear Put Spread</name>
-     <leg1>Buy 1 ITM Put</leg1>
-     <leg2>Sell 1 OTM Put</leg2>
+     <play1>Buy 1 ITM Put</play1>
+     <play2>Sell 1 OTM Put</play2>
    </option>
    <option>
      <name>Covered Put</name>
-     <leg1>Short 100 Shares</leg1>
-     <leg2>Sell 1 ATM Put</leg2>
+     <play1>Short 100 Shares</play1>
+     <play2>Sell 1 ATM Put</play2>
    </option>
    <option>
      <name>Diagonal Bear Put Spread</name>
-     <leg1>Buy 1 Long-Term ITM Put</leg1>
-     <leg2>Sell 1 Near-Term OTM Put</leg2>
+     <play1>Buy 1 Long-Term ITM Put</play1>
+     <play2>Sell 1 Near-Term OTM Put</play2>
    </option>
    <option>
      <name>Long Put</name>
-     <leg1>Buy 1 ATM Put</leg1>
-     <leg2></leg2>
+     <play1>Buy 1 ATM Put</play1>
+     <play2></play2>
    </option>
    <option>
      <name>Naked Call ITM</name>
-     <leg1>Sell 1 ITM Call</leg1>
-     <leg2></leg2>
+     <play1>Sell 1 ITM Call</play1>
+     <play2></play2>
    </option>
    <option>
      <name>Naked Call OTM</name>
-     <leg1>Sell 1 OTM Call</leg1>
-     <leg2></leg2>
+     <play1>Sell 1 OTM Call</play1>
+     <play2></play2>
    </option>
    <option>
      <name>Put Backspread</name>
-     <leg1>Sell 1 ITM Put</leg1>
-     <leg2>Buy 2 OTM Puts</leg2>
+     <play1>Sell 1 ITM Put</play1>
+     <play2>Buy 2 OTM Puts</play2>
    </option>
    <option>
      <name>Protective Call</name>
-     <leg1>Short 100 Shares</leg1>
-     <leg2>Buy 1 ATM Call</leg2>
+     <play1>Short 100 Shares</play1>
+     <play2>Buy 1 ATM Call</play2>
    </option>
 
    <option>
      <name>Butterfly Spread</name>
-     <leg1>Sell 1 ITM Call</leg1>
-     <leg2>Buy 1 ITM Call(Lower Strike)</leg2>
+     <play1>Sell 1 ITM Call</play1>
+     <play2>Buy 1 ITM Call(Lower Strike)</play2>
      <leg3>Sell 1 OTM Call</leg3>
      <leg4>Buy 1 OTM Call (Higher Strike)</leg4>
    </option>
    <option>
      <name>//Calendar Spread</name>
-     <leg1>Sell 1 ITM Call</leg1>
-     <leg2>Buy 1 ITM Call(Lower Strike)</leg2>
+     <play1>Sell 1 ITM Call</play1>
+     <play2>Buy 1 ITM Call(Lower Strike)</play2>
      <leg3>Sell 1 OTM Call</leg3>
      <leg4>Buy 1 OTM Call (Higher Strike)</leg4>
    </option>
    <option>
      <name>Condor</name>
-     <leg1>Sell 1 ITM Call</leg1>
-     <leg2>Buy 1 ITM Call(Lower Strike)</leg2>
+     <play1>Sell 1 ITM Call</play1>
+     <play2>Buy 1 ITM Call(Lower Strike)</play2>
      <leg3>Sell 1 OTM Call</leg3>
      <leg4>Buy 1 OTM Call (Higher Strike)</leg4>
    </option>
    <option>
      <name>Iron Butterfly</name>
-     <leg1>Buy 1 OTM Put</leg1>
-     <leg2>Sell 1 ATM Put</leg2>
+     <play1>Buy 1 OTM Put</play1>
+     <play2>Sell 1 ATM Put</play2>
      <leg3>Sell 1 ATM Call</leg3>
      <leg4>Buy 1 OTM Call</leg4>
    </option>
    <option>
      <name>Iron Condor</name>
-     <leg1>Sell 1 OTM Put</leg1>
-     <leg2>Buy 1 OTM Put(Lower Strike)</leg2>
+     <play1>Sell 1 OTM Put</play1>
+     <play2>Buy 1 OTM Put(Lower Strike)</play2>
      <leg3>Sell 1 OTM Call</leg3>
      <leg4>Buy 1 OTM Call(Higher Strike)</leg4>
    </option>
    <option>
      <name>Long Put Butterfly</name>
-     <leg1>Buy 1 OTM Put</leg1>
-     <leg2>Sell 2 ATM Puts</leg2>
+     <play1>Buy 1 OTM Put</play1>
+     <play2>Sell 2 ATM Puts</play2>
      <leg3>Buy 1 ITM Put</leg3>
    </option>
    <option>
      <name>Long Straddle</name>
-     <leg1>Buy 1 ATM Call</leg1>
-     <leg2>Buy 1 ATM Put</leg2>
+     <play1>Buy 1 ATM Call</play1>
+     <play2>Buy 1 ATM Put</play2>
    </option>
    <option>
      <name>Long Strangle</name>
-     <leg1>Buy 1 OTM Call</leg1>
-     <leg2>Buy 1 OTM Put</leg2>
+     <play1>Buy 1 OTM Call</play1>
+     <play2>Buy 1 OTM Put</play2>
    </option>
    <option>
      <name>Neutral Calendar Spread</name>
-     <leg1>Sell 1 Near-Term ATM Call</leg1>
-     <leg2>Buy 1 Long-Term ATM Call</leg2>
+     <play1>Sell 1 Near-Term ATM Call</play1>
+     <play2>Buy 1 Long-Term ATM Call</play2>
    </option>
    <option>
      <name>Put Ratio Spread</name>
-     <leg1>Buy 1 ITM Put</leg1>
-     <leg2>Sell 2 OTM Puts</leg2>
+     <play1>Buy 1 ITM Put</play1>
+     <play2>Sell 2 OTM Puts</play2>
    </option>
    <option>
      <name>Ratio Call Write</name>
-     <leg1>Long 100 Shares</leg1>
-     <leg2>Sell 2 ATM Calls</leg2>
+     <play1>Long 100 Shares</play1>
+     <play2>Sell 2 ATM Calls</play2>
    </option>
    <option>
      <name>Ratio Put Write</name>
-     <leg1>Short 100 Shares</leg1>
-     <leg2>Sell 2 ATM Puts</leg2>
+     <play1>Short 100 Shares</play1>
+     <play2>Sell 2 ATM Puts</play2>
    </option>
    <option>
      <name>Ratio Spread</name>
-     <leg1>Buy 1 ITM Call</leg1>
-     <leg2>Sell 2 OTM Calls</leg2>
+     <play1>Buy 1 ITM Call</play1>
+     <play2>Sell 2 OTM Calls</play2>
    </option>
    <option>
      <name>Short Butterfly</name>
-     <leg1>Sell 1 ITM Call</leg1>
-     <leg2>Buy 2 ATM Calls</leg2>
+     <play1>Sell 1 ITM Call</play1>
+     <play2>Buy 2 ATM Calls</play2>
      <leg3>Sell 1 OTM Call</leg3>
    </option>
    <option>
      <name>Short Condor</name>
-     <leg1>Buy 1 ITM Call</leg1>
-     <leg2>Sell 1 ITM Call(Lower Strike)</leg2>
+     <play1>Buy 1 ITM Call</play1>
+     <play2>Sell 1 ITM Call(Lower Strike)</play2>
      <leg3>Buy 1 OTM Call</leg3>
      <leg4>Sell 1 OTM Call (Higher Strike)</leg4>
    </option>
    <option>
      <name>Short Put Butterfly</name>
-     <leg1>Sell 1 ITM Put</leg1>
-     <leg2>Buy 2 ATM Puts</leg2>
+     <play1>Sell 1 ITM Put</play1>
+     <play2>Buy 2 ATM Puts</play2>
      <leg3>Sell 1 OTM Put</leg3>
    </option>
    <option>
      <name>Short Straddle</name>
-     <leg1>Sell 1 ATM Call</leg1>
-     <leg2>Sell 1 ATM Put</leg2>
+     <play1>Sell 1 ATM Call</play1>
+     <play2>Sell 1 ATM Put</play2>
    </option>
    <option>
      <name>Short Strangle</name>
-     <leg1>Sell 1 OTM Call</leg1>
-     <leg2>Sell 1 OTM Put</leg2>
+     <play1>Sell 1 OTM Call</play1>
+     <play2>Sell 1 OTM Put</play2>
    </option>
    <option>
      <name>Variable Ratio Write</name>
-     <leg1>Long 100 Shares</leg1>
-     <leg2>Sell 1 ITM Call</leg2>
+     <play1>Long 100 Shares</play1>
+     <play2>Sell 1 ITM Call</play2>
      <leg3>Sell 1 OTM Call</leg3>
    </option>
    <option>
      <name>Reverse Iron Condor</name>
-     <leg1>Buy 1 OTM Put</leg1>
-     <leg2>Sell 1 OTM Put(Lower Strike)</leg2>
+     <play1>Buy 1 OTM Put</play1>
+     <play2>Sell 1 OTM Put(Lower Strike)</play2>
      <leg3>Buy 1 OTM Call</leg3>
      <leg4>Sell 1 OTM Call(Higher Strike)</leg4>
    </option>
    <option>
      <name>Reverse Iron Butterfly</name>
-     <leg1>Sell 1 OTM Put</leg1>
-     <leg2>Buy 1 ATM Put</leg2>
+     <play1>Sell 1 OTM Put</play1>
+     <play2>Buy 1 ATM Put</play2>
      <leg3>Buy 1 ATM Call</leg3>
      <leg4>Sell 1 OTM Call</leg4>
    </option>
    <option>
      <name>Long Guts</name>
-     <leg1>Buy 1 ITM Call</leg1>
-     <leg2>Buy 1 ITM Put</leg2>
+     <play1>Buy 1 ITM Call</play1>
+     <play2>Buy 1 ITM Put</play2>
    </option>
    <option>
      <name>Short Guts</name>
-     <leg1>Sell 1 ITM Call</leg1>
-     <leg2>Sell 1 ITM Put</leg2>
+     <play1>Sell 1 ITM Call</play1>
+     <play2>Sell 1 ITM Put</play2>
    </option>
    <option>
      <name>Long Call Ladder</name>
-     <leg1>Buy 1 ITM Call</leg1>
-     <leg2>Sell 1 ATM Call</leg2>
+     <play1>Buy 1 ITM Call</play1>
+     <play2>Sell 1 ATM Call</play2>
    <leg3>Sell 1 OTM Call</leg3>
    </option>
    <option>
      <name>Short Call Ladder</name>
-     <leg1>Sell 1 ITM Call</leg1>
-     <leg2>Buy 1 ATM Call</leg2>
+     <play1>Sell 1 ITM Call</play1>
+     <play2>Buy 1 ATM Call</play2>
      <leg3>Buy 1 OTM Call</leg3>
    </option>
    <option>
      <name>Long Put Ladder</name>
-     <leg1>Buy 1 ITM Put</leg1>
-     <leg2>Sell 1 ATM Put</leg2>
+     <play1>Buy 1 ITM Put</play1>
+     <play2>Sell 1 ATM Put</play2>
    </option>
    <option>
      <name>Short Put Ladder</name>
-     <leg1>Sell 1 ITM Put</leg1>
-     <leg2>Buy 1 ATM Put</leg2>
+     <play1>Sell 1 ITM Put</play1>
+     <play2>Buy 1 ATM Put</play2>
    </option>
    <option>
      <name>Strip</name>
-     <leg1>Buy 1 ATM Call</leg1>
-     <leg2>Buy 2 ATM Puts</leg2>
+     <play1>Buy 1 ATM Call</play1>
+     <play2>Buy 2 ATM Puts</play2>
    </option>
    <option>
      <name>Strap</name>
-     <leg1>Buy 2 ATM Calls</leg1>
-     <leg2>Buy 1 ATM Put</leg2>
+     <play1>Buy 2 ATM Calls</play1>
+     <play2>Buy 1 ATM Put</play2>
    </option>
 
    <option>
      <name>Synthetic Long Call</name>
-     <leg1>Long 100 Shares</leg1>
-     <leg2>Buy 1 ATM Put</leg2>
+     <play1>Long 100 Shares</play1>
+     <play2>Buy 1 ATM Put</play2>
    </option>
    <option>
      <name>Synthetic Long Put</name>
-     <leg1>Short 100 Shares</leg1>
-     <leg2>Buy 1 ATM Call</leg2>
+     <play1>Short 100 Shares</play1>
+     <play2>Buy 1 ATM Call</play2>
    </option>
    <option>
      <name>Synthetic Long Stock (Split Strikes)</name>
-     <leg1>Buy 1 OTM Call</leg1>
-     <leg2>Sell 1 OTM Put</leg2>
+     <play1>Buy 1 OTM Call</play1>
+     <play2>Sell 1 OTM Put</play2>
    </option>
    <option>
      <name>Synthetic Long Stock</name>
-     <leg1>Buy 1 ATM Call</leg1>
-     <leg2>Sell 1 ATM Put</leg2>
+     <play1>Buy 1 ATM Call</play1>
+     <play2>Sell 1 ATM Put</play2>
    </option>
    <option>
      <name>Synthetic Short Call</name>
-     <leg1>Short 100 Shares</leg1>
-     <leg2>Sell 1 ATM Put</leg2>
+     <play1>Short 100 Shares</play1>
+     <play2>Sell 1 ATM Put</play2>
    </option>
    <option>
      <name>Synthetic Short Put</name>
-     <leg1>Long 100 Shares</leg1>
-     <leg2>Sell 1 ATM Call</leg2>
+     <play1>Long 100 Shares</play1>
+     <play2>Sell 1 ATM Call</play2>
    </option>
    <option>
      <name>Synthetic Short Stock (Split Strikes)</name>
-     <leg1>Sell 1 OTM Call</leg1>
-     <leg2>Buy 1 OTM Put</leg2>
+     <play1>Sell 1 OTM Call</play1>
+     <play2>Buy 1 OTM Put</play2>
    </option>
    <option>
      <name>Synthetic Short Stock</name>
-     <leg1>Buy 1 ATM Put</leg1>
-     <leg2>Sell 1 ATM Call</leg2>
+     <play1>Buy 1 ATM Put</play1>
+     <play2>Sell 1 ATM Call</play2>
    </option>
    <option>
      <name>Long Call Synthetic Straddle</name>
-     <leg1>Buy 2 ATM Calls</leg1>
-     <leg2>Short 100 Shares</leg2>
+     <play1>Buy 2 ATM Calls</play1>
+     <play2>Short 100 Shares</play2>
    </option>
    <option>
      <name>Long Put Synthetic Straddle</name>
-     <leg1>Buy 2 ATM Puts</leg1>
-     <leg2>Long 100 Shares</leg2>
+     <play1>Buy 2 ATM Puts</play1>
+     <play2>Long 100 Shares</play2>
    </option>
    <option>
      <name>Short Call Synthetic Straddle</name>
-     <leg1>Sell 2 ATM Calls</leg1>
-     <leg2>Long 100 Shares</leg2>
+     <play1>Sell 2 ATM Calls</play1>
+     <play2>Long 100 Shares</play2>
    </option>
    <option>
      <name>Short Put Put Synthetic Straddle</name>
-     <leg1>Sell 2 ATM Puts</leg1>
-     <leg2>Short 100 Shares</leg2>
+     <play1>Sell 2 ATM Puts</play1>
+     <play2>Short 100 Shares</play2>
    </option>
 
 
